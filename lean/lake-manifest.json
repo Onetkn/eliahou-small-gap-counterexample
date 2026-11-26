@@ -1,0 +1,99 @@
+{
+  "version": "1.3.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "type": "path",
+      "scope": "",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/mathlib",
+      "copy": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/Cli",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/batteries",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/Qq",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/aesop",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/proofwidgets",
+      "copy": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/importGraph",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/LeanSearchClient",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "scope": "",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inherited": false,
+      "dir": "Bootstrap/sources/plausible",
+      "copy": false,
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "name": "eliahou_counterexample",
+  "lakeDir": ".lake",
+  "fixedToolchain": false
+}

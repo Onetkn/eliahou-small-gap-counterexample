@@ -1,0 +1,42 @@
+name = "eliahou_counterexample"
+version = "0.1.0"
+defaultTargets = ["Eliahou"]
+
+[[lean_lib]]
+name = "Eliahou"
+
+[[require]]
+name = "plausible"
+path = "Bootstrap/sources/plausible"
+
+[[require]]
+name = "LeanSearchClient"
+path = "Bootstrap/sources/LeanSearchClient"
+
+[[require]]
+name = "importGraph"
+path = "Bootstrap/sources/importGraph"
+
+[[require]]
+name = "proofwidgets"
+path = "Bootstrap/sources/proofwidgets"
+
+[[require]]
+name = "aesop"
+path = "Bootstrap/sources/aesop"
+
+[[require]]
+name = "Qq"
+path = "Bootstrap/sources/Qq"
+
+[[require]]
+name = "batteries"
+path = "Bootstrap/sources/batteries"
+
+[[require]]
+name = "Cli"
+path = "Bootstrap/sources/Cli"
+
+[[require]]
+name = "mathlib"
+path = "Bootstrap/sources/mathlib"

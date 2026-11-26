@@ -1,0 +1,56 @@
+[
+  {
+    "name": "mathlib",
+    "repo": "leanprover-community/mathlib4",
+    "rev": "fc4f59e577feb1a4956671bc04ac18aaaf8cd842",
+    "archive_sha256": "d2a51957e3193e2014c698d0f88e45f5c7ebf8968814309c0118722ed33c18ab"
+  },
+  {
+    "name": "plausible",
+    "repo": "leanprover-community/plausible",
+    "rev": "054b228ce0ac61d767c6e71ba73a24728f191b72",
+    "archive_sha256": "cdafaed204c7715bb8410b80f2e56650798a407399451bfbb98036551a350e92"
+  },
+  {
+    "name": "LeanSearchClient",
+    "repo": "leanprover-community/LeanSearchClient",
+    "rev": "4fb58e749ef3fc0395fe274f6cab70c2ea85f1c9",
+    "archive_sha256": "b15298df69660a9bb620b2cfa7d713e1d5ac9d34b032f354f9d9bf3cd8986a2c"
+  },
+  {
+    "name": "importGraph",
+    "repo": "leanprover-community/import-graph",
+    "rev": "8370c640afcd1cc3fb1cb9bf1560cc66eafee5e0",
+    "archive_sha256": "037f6314f8ca5bbac15528368ed130514ab6a16a47fccd03525a9a31134ab87f"
+  },
+  {
+    "name": "proofwidgets",
+    "repo": "leanprover-community/ProofWidgets4",
+    "rev": "2f0f3520daeac2d9310ff25b7a877a0e5cdaa203",
+    "archive_sha256": "d09a4398fa7fe7c5110781daa96e01c9f7d2a743e2516e1d7dade49192a2d6ee"
+  },
+  {
+    "name": "aesop",
+    "repo": "leanprover-community/aesop",
+    "rev": "66ff77cf0c4c898799e4b94d14db55f7a02d0c5a",
+    "archive_sha256": "51db3ab22a9b77b396d40f406dadce6da54824aeb53fb296fb9fe2bee24b4a83"
+  },
+  {
+    "name": "Qq",
+    "repo": "leanprover-community/quote4",
+    "rev": "ff055a2fcc835935e0ae607339b455a5f5896b4b",
+    "archive_sha256": "1b46cbdb905c4899d3cafa078efd8b6c7560e6f73f6eee6cfa071275010872df"
+  },
+  {
+    "name": "batteries",
+    "repo": "leanprover-community/batteries",
+    "rev": "b4b25a3886a16daacaf6615c2eea7170a6e8f458",
+    "archive_sha256": "fc36428a1062ae5d2f380359a64aa6384a973b2ec840db8e36794bfbdb7e8b2a"
+  },
+  {
+    "name": "Cli",
+    "repo": "leanprover/lean4-cli",
+    "rev": "50810f72af7618bee62fe9800dc26e806c188703",
+    "archive_sha256": "da44e9be5f969c68d31df9738b397fe73e76e6ee15dc7bf873d3d1680f7520de"
+  }
+]

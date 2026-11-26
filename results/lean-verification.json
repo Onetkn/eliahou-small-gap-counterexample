@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "toolchain": "leanprover/lean4:v4.36.0",
+  "required_main_theorem": "Eliahou.Counterexample.not_smallGapConjecture",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "stages": [
+    {
+      "command": [
+        "lake.exe",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "lake.exe",
+        "env",
+        "lean",
+        "Audit.lean"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "declarations": {
+    "Eliahou.Counterexample.not_smallGapConjecture": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.counterexample_family": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.genericEliahou_family": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.family_isConductor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.value_injective_below": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.card_left": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.card_leftPrims": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.card_rightDecomp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Eliahou.Counterexample.eliahou_eq_neg_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "errors": [],
+  "expected_declarations": [
+    "Eliahou.Counterexample.not_smallGapConjecture",
+    "Eliahou.Counterexample.counterexample_family",
+    "Eliahou.Counterexample.genericEliahou_family",
+    "Eliahou.Counterexample.family_isConductor",
+    "Eliahou.Counterexample.value_injective_below",
+    "Eliahou.Counterexample.card_left",
+    "Eliahou.Counterexample.card_leftPrims",
+    "Eliahou.Counterexample.card_rightDecomp",
+    "Eliahou.Counterexample.eliahou_eq_neg_eight"
+  ]
+}

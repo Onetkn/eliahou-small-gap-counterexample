@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Negative Eliahou numbers with consecutive first generators},pdfauthor={Zhengyi Liu}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\N}{\mathbb N}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\title{Negative Eliahou numbers with consecutive first generators}
+\author{Zhengyi Liu}
+\date{November 26, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct an infinite family of numerical semigroups whose first two
+minimal generators are consecutive and whose Eliahou number is $-8$.
+This disproves Conjecture 2.7 of Bacher, which asserts nonnegativity when
+the second generator is at most the multiplicity plus six.
+The proof uses a positional encoding to make short factorizations unique,
+followed by a closed combinatorial count. No exhaustive search of
+semigroups is needed.
+\end{abstract}
+
+\section{Statement}
+For a numerical semigroup $S\subseteq\N$, let $m$ be its multiplicity,
+$c$ its actual conductor, and $P$ its set of minimal generators, also
+called primitive elements. Put
+\[
+ L=S\cap[0,c),\quad k=\card L,\quad \ell=\card{P\cap L},\quad
+ q=\lceil c/m\rceil,\quad \rho=qm-c.
+\]
+Writing $s$ for the number of decomposable elements in $[c,c+m)$,
+the Eliahou number is
+\begin{equation}\label{eq:E}
+ E(S)=k\ell-qs+\rho.
+\end{equation}
+Equivalently, if $r$ counts the primitive elements in that interval,
+then $E(S)=k\ell+qr-c$, since $r+s=m$.
+
+In the notation $m=\gamma_0<\gamma_1<\cdots$ for the left generators,
+Bacher's Conjecture 2.7 states that $\gamma_1\le m+6$ implies
+$E(S)\ge0$~\cite{Bacher}. The following family contradicts that assertion
+even with $\gamma_1=m+1$.
+
+\begin{theorem}\label{thm:main}
+Let $M\ge10^6$ be an integer and define
+\[
+ G_M=\{4M,4M+1\}\cup\{5M+10^i:1\le i\le5\},
+ \qquad S_M=\langle G_M\rangle\cup[32M,\infty).
+\]
+Then $S_M$ is a numerical semigroup with actual conductor $c=32M$,
+multiplicity $m=4M$, and first two primitive elements $m,m+1$.
+Moreover,
+\[
+ k=2024,\qquad \ell=7,\qquad s=1772,\qquad E(S_M)=-8.
+\]
+\end{theorem}
+
+For instance, $M=10^6$ gives the explicit presentation
+\begin{align*}
+ S=\langle&4\,000\,000,\ 4\,000\,001,\ 5\,000\,010,\ 5\,000\,100,\\
+           &5\,001\,000,\ 5\,010\,000,\ 5\,100\,000\rangle_{32\,000\,000}.
+\end{align*}
+Here the subscript means adjoining every integer starting at that value;
+the proof below establishes that it is the actual conductor.
+
+\section{Short factorizations and the actual conductor}
+Write $T=\langle G_M\rangle$. A factorization in $T$ has the form
+\begin{align}
+ N&=4Mx_0+(4M+1)x_1+\sum_{i=1}^5(5M+10^i)v_i\notag\\
+  &=M Q+\delta,\label{eq:encoding}\\
+ Q&=4(x_0+x_1)+5t,\quad t=\sum_{i=1}^5v_i,
+ \qquad \delta=x_1+\sum_{i=1}^5 10^i v_i,\notag
+\end{align}
+where all coefficients are nonnegative integers.
+
+\begin{lemma}\label{lem:encoding}
+The map in \eqref{eq:encoding} gives a bijection from coefficient
+vectors satisfying $Q\le35$ to $T\cap[0,36M)$.
+For such a vector, $N<32M$ if and only if $Q\le31$.
+\end{lemma}
+\begin{proof}
+If $N<36M$, every summand is at least $4M$, so the total coefficient
+$x_0+x_1+t$ is at most eight. Consequently
+\[
+ 0\le\delta\le10^5(x_0+x_1+t)\le800000<M.
+\]
+Thus $Q=\lfloor N/M\rfloor\le35$.
+Conversely, $Q\le35$ implies $4(x_0+x_1+t)\le35$, hence the same
+coefficient and offset bounds, which give $N<36M$.
+In either direction, $N<32M$ is equivalent to $Q\le31$.
+
+For injectivity, $N$ uniquely determines its quotient $Q$ and remainder
+$\delta$ upon division by $M$. Each of $x_1,v_1,\ldots,v_5$ is at most
+eight. They are therefore precisely the six decimal digits of $\delta$,
+with leading zeroes permitted. The quotient $Q$ then determines $x_0$.
+\end{proof}
+
+The set $S_M$ contains zero, is additively closed, and contains the entire
+tail $[32M,\infty)$; it is therefore a numerical semigroup.
+Its least positive element is $4M$.
+If $32M-1$ belonged to $T$, Lemma~\ref{lem:encoding} would force its
+remainder modulo $M$ to be at most $800000$. Its remainder is instead
+$M-1\ge999999$. Thus $32M-1\notin S_M$, proving that $32M$ is the
+actual conductor, not merely an upper bound for it.
+
+All seven members of $G_M$ lie in $[4M,8M)$ and are distinct, so they
+are primitive. Every other positive element of $T$ has a factorization
+using at least two generators. Below $32M$ it is therefore decomposable
+in $S_M$. Hence these seven elements are exactly the left primitives,
+and the first two are $4M$ and $4M+1$.
+
+\section{The two counts}
+Set $r=x_0+x_1$. For fixed $t$, the number of choices of
+$(v_1,\ldots,v_5)$ is $\binom{t+4}{4}$, and for fixed $r$ the number
+of choices of $(x_0,x_1)$ is $r+1$.
+Lemma~\ref{lem:encoding} now gives
+\begin{equation}\label{eq:left}
+ k=\sum_{t=0}^{6}\binom{t+4}{4}
+       \sum_{r=0}^{\lfloor(31-5t)/4\rfloor}(r+1)
+   =\sum_{t=0}^{6}\binom{t+4}{4}
+       \binom{9-\lfloor5t/4\rfloor}{2}.
+\end{equation}
+
+The decomposable elements in $[32M,36M)$ are exactly
+$T\cap[32M,36M)$. Indeed, a decomposition there cannot use an element
+of the adjoined tail: its sum with any positive element would be at
+least $32M+4M$. Both summands must therefore belong to $T$.
+Conversely, an element of $T$ in this interval is larger than every
+member of $G_M$, so any factorization of it uses at least two
+generators and supplies a decomposition.
+
+For each $0\le t\le7$, the interval
+$32\le4r+5t\le35$ contains exactly one allowed value of $r$, namely
+$r=8-\lfloor5t/4\rfloor$. Thus
+\begin{equation}\label{eq:right}
+ s=\sum_{t=0}^{7}\binom{t+4}{4}
+                 \bigl(9-\lfloor5t/4\rfloor\bigr).
+\end{equation}
+The short sums \eqref{eq:left}--\eqref{eq:right} evaluate as follows.
+These are counts of all coefficient vectors by degree, not a search
+over bounded semigroups.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$t$ & $\binom{t+4}{4}$ & contribution to $k$ & contribution to $s$\\
+\midrule
+0 & 1 & 36 & 9\\
+1 & 5 & 140 & 40\\
+2 & 15 & 315 & 105\\
+3 & 35 & 525 & 210\\
+4 & 70 & 420 & 280\\
+5 & 126 & 378 & 378\\
+6 & 210 & 210 & 420\\
+7 & 330 & 0 & 330\\
+\midrule
+Total & & 2024 & 1772\\
+\bottomrule
+\end{tabular}
+\end{center}
+Since $c=8m$, we have $q=8$ and $\rho=0$. Substitution into
+\eqref{eq:E} completes the proof of Theorem~\ref{thm:main}:
+\[
+ E(S_M)=7\cdot2024-8\cdot1772=-8.
+\]
+
+\section{Scope and reproducibility}
+Theorem~\ref{thm:main} disproves the small-gap implication of
+Conjecture 2.7 in version 9 of~\cite{Bacher}. It does not disprove
+Wilf's conjecture. Indeed, the number of right primitives is
+$4M-1772$, so the total embedding dimension is $4M-1765$ and
+\[
+ W(S_M)=2024(4M-1765)-32M=8064M-3572360>0.
+\]
+No minimality claim is made. The large decimal separation makes the
+proof transparent. Supplementary exact calculations accompany the
+uniform symbolic proof above.
+
+\paragraph{Formal verification.}
+The companion Lean 4 development proves the full family from intrinsic
+semigroup definitions and refutes the universally quantified conjecture,
+using only Lean's three standard axioms. The
+\href{https://github.com/Onetkn/eliahou-small-gap-counterexample}{source and verification records}
+are available online.
+
+\paragraph{AI assistance.}
+OpenAI Codex assisted in the construction, proof development, computational
+checks, formalization, and manuscript preparation.
+
+\begin{thebibliography}{9}
+\bibitem{Bacher}
+A. Bacher, \emph{Families of Eliahou semigroups linked to Farey intervals},
+arXiv:2604.25051v9, 14 October 2026.
+\url{https://arxiv.org/abs/2604.25051v9}.
+\end{thebibliography}
+\end{document}

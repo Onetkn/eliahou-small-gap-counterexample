@@ -1,0 +1,6 @@
+.lake/
+.tools/
+Bootstrap/
+*.olean
+*.ilean
+*.trace

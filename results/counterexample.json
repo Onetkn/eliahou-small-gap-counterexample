@@ -1,0 +1,76 @@
+{
+  "scale": 1000000,
+  "multiplicity": 4000000,
+  "conductor": 32000000,
+  "generators": [
+    4000000,
+    4000001,
+    5000010,
+    5000100,
+    5001000,
+    5010000,
+    5100000
+  ],
+  "first_gap": 1,
+  "depth": 8,
+  "rho": 0,
+  "k": 2024,
+  "ell": 7,
+  "s": 1772,
+  "r": 3998228,
+  "E": -8,
+  "W": 8060427640,
+  "conductor_predecessor_absent": true,
+  "threshold_equals_positive_double_sumset": true,
+  "degree_counts": [
+    {
+      "t": 0,
+      "compositions": 1,
+      "left": 36,
+      "threshold": 9
+    },
+    {
+      "t": 1,
+      "compositions": 5,
+      "left": 140,
+      "threshold": 40
+    },
+    {
+      "t": 2,
+      "compositions": 15,
+      "left": 315,
+      "threshold": 105
+    },
+    {
+      "t": 3,
+      "compositions": 35,
+      "left": 525,
+      "threshold": 210
+    },
+    {
+      "t": 4,
+      "compositions": 70,
+      "left": 420,
+      "threshold": 280
+    },
+    {
+      "t": 5,
+      "compositions": 126,
+      "left": 378,
+      "threshold": 378
+    },
+    {
+      "t": 6,
+      "compositions": 210,
+      "left": 210,
+      "threshold": 420
+    },
+    {
+      "t": 7,
+      "compositions": 330,
+      "left": 0,
+      "threshold": 330
+    }
+  ],
+  "method": "Exact sparse check; the infinite-family proof is symbolic."
+}
